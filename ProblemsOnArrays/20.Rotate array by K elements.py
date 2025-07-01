@@ -30,3 +30,24 @@ else:
         ans.append(arr[i])
 
 print(ans)
+
+
+#Solution 2
+def revi(a,low,h):
+    l=low
+    r=h-1
+    while l<r:
+        a[l],a[r]=a[r],a[l]
+        l+=1
+        r-=1
+    return a
+p=[6,4,6,2,1]
+k=2
+revi(p,0,k)
+revi(p,k,len(p))
+print(revi(p,0,len(p)))
+#Output
+[6, 2, 1, 6, 4]
+
+            
+
